@@ -14,11 +14,23 @@ library(readxl)
 
 
 #read in HRH files  ---------------------------------------------------------
+# FACT VIEW
 fv_file<-list.files(here("Data"),pattern="Factview")
 
 fact_view<-read_excel(here("Data",fv_file))
 
 
-raw_file<-list.files(here("Data"),pattern="FYQ")
+# POSITION LEVEL
+raw_file<-list.files(here("Data"),pattern="Clean")
 
 raw<-read_excel(here("Data",raw_file))
+
+
+# TEST/DUMMY DATA
+test_file<-list.files(here("Data"),pattern="Test")
+
+test_df<-read_excel(here("Data",test_file))
+
+
+
+# 
